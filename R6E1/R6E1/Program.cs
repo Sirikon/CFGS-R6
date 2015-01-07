@@ -27,6 +27,11 @@ namespace R6E1
             Console.ReadLine();
         }
 
+        /// <summary>
+        /// Invierte el orden de los caracteres de una cadena
+        /// </summary>
+        /// <param name="t">Cadena para invertir</param>
+        /// <returns>Cadena invertida</returns>
         static String alReves(String t)
         {
             StringBuilder sb = new StringBuilder(t.Length);

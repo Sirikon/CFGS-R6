@@ -24,11 +24,21 @@ namespace R6E4
             Console.ReadLine();
         }
 
+        /// <summary>
+        /// Ejecuta las trimD y trimI sobre el String dado
+        /// </summary>
+        /// <param name="t">String al cual borrar los espacios sobrantes en los extremos</param>
+        /// <returns>Cadena limpia</returns>
         static string trimAll(String t)
         {
             return trimD(trimI(t));
         }
 
+        /// <summary>
+        /// Elimina los espacios sobrantes a la Izquierda
+        /// </summary>
+        /// <param name="t">Cadena sobre la que actuar</param>
+        /// <returns>Cadena limpia</returns>
         static string trimI(String t)
         {
             StringBuilder sb = new StringBuilder(t);
@@ -45,6 +55,11 @@ namespace R6E4
             return sb.ToString();
         }
 
+        /// <summary>
+        /// Elimina los espacios sobrantes a la Derecha
+        /// </summary>
+        /// <param name="t">Cadena sobre la que actuar</param>
+        /// <returns>Cadena limpia</returns>
         static string trimD(String t)
         {
             StringBuilder sb = new StringBuilder(t);

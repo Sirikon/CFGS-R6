@@ -24,6 +24,11 @@ namespace R6E3
             Console.ReadLine();
         }
 
+        /// <summary>
+        /// Elimina los espacios sobrantes a la Izquierda
+        /// </summary>
+        /// <param name="t">Cadena sobre la que actuar</param>
+        /// <returns>Cadena limpia</returns>
         static string trimI(String t)
         {
             StringBuilder sb = new StringBuilder(t);
