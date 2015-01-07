@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Text;
 
 namespace R6E1
@@ -24,6 +22,7 @@ namespace R6E1
                 Console.WriteLine("No escribiste nada...");
             }
             Console.WriteLine(alReves(t));
+            Console.WriteLine("Pulse enter para salir...");
             Console.ReadLine();
         }
 
