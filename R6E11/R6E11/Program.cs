@@ -9,7 +9,15 @@ namespace R6E11
         {
             Console.WriteLine("Introduzca un texto y lo pasaré a mayúsculas");
             Console.Write("Texto: ");
-            Console.WriteLine(AMayuscula(Console.ReadLine()));
+            String text = Console.ReadLine();
+            if (text == "")
+            {
+                Console.WriteLine("No ha escrito nada...");
+            }
+            else
+            {
+                Console.WriteLine("Texto en mayúsculas: " + AMayuscula(text));
+            }
             Console.WriteLine("Pulse enter para salir...");
             Console.ReadLine();
         }
