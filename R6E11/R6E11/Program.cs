@@ -14,8 +14,13 @@ namespace R6E11
             Console.ReadLine();
         }
 
+        static String MATRIX_MINUS = "çñáàäâéèëêíìïîóòöôúùüû";
+        static String MATRIX_MAYUS = "ÇÑÁÀÄÂÉÈËÊÍÌÏÎÓÒÖÔÚÙÜÛ";
+
         /// <summary>
-        /// Pasa a mayúsculas la cadena de texto data
+        /// Pasa a mayúsculas la cadena de texto dada
+        /// 
+        /// Acepta todos los caracteres ingleses, la Ñ, la Ç y las vocales con tildes (áà) diéresis (ä) y sombrerito (â)
         /// </summary>
         /// <param name="t">Cadena para pasar a mayúsculas</param>
         /// <returns>Cadena en mayúsculas</returns>
@@ -29,13 +34,14 @@ namespace R6E11
 
             for (int i = 0; i < t.Length; i++)
             {
+
                 if ((Int32)t[i] >= AMin && (Int32)t[i] <= ZMin)
                 {
                     sb.Append((char)((Int32)t[i]+toMayusDiff));
                 }
-                else if(t[i] == 'ñ')
+                else if( MATRIX_MINUS.IndexOf(t[i]) >= 0 )
                 {
-                    sb.Append('Ñ');
+                    sb.Append(MATRIX_MAYUS[MATRIX_MINUS.IndexOf(t[i])]);
                 }
                 else
                 {
